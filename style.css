@@ -26,3 +26,38 @@ body {
     
 }
 
+.container-header {
+    display: block;
+    width: auto;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+}
+
+.row-header {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+    padding: 20px 0;
+}
+
+.col-logo {
+    z-index: 1;
+}
+
+
+@media screen and (min-width: 1025px){
+    .col-logo {
+        max-width: 5%;
+        flex: 0 0 5%;
+    }
+}
+
+@media screen and (min-width: 1025px){
+    .container-header {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
