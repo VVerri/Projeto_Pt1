@@ -69,6 +69,13 @@ body {
     margin: 0 10px 0 0;
     cursor: pointer;
     font-weight: 300;
+    font-size: .875rem;
+    color: #fff;
+    
+}
+
+.li-menu:hover{
+    color: #ffc709;
 }
 
 .word-menu {
@@ -77,13 +84,19 @@ body {
     border: 0;
     margin: 0;
     background-color: transparent;
-    color: #fff;
+    
     cursor: pointer;
     pointer-events: none;
     text-transform: uppercase;
     font-family: inherit;
     font-size: .875rem;
     font-weight: inherit;
+}
+
+.word-menu:hover{
+    z-index: 2;
+    color: #ffc709;
+    background: #000000;
 }
 
 .col-singup {
@@ -95,7 +108,52 @@ body {
     cursor: pointer;
     font-size: .75rem;
     letter-spacing: 1.71px;
+    background: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+    margin: 10px 5px ;
 }
+
+.open-account:hover{
+    color: #000000;
+    background: #ffc709;
+    border: 2px solid  #ffc709 ;
+}
+
+.col-singin {
+    max-width: 11%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 11%;
+    -moz-box-flex: 0;
+    -ms-flex: 0 0 11%;
+    flex: 0 0 11%;
+}
+
+.login {
+    color: #fff;
+    display: inline;
+    width: 100%;
+    padding-bottom: 6px;    
+    cursor: pointer;
+    text-decoration: none;
+    background-image: -webkit-linear-gradient(transparent -webkit-calc(100% - 1px),#ffc709 5px);
+    background-image: -moz-linear-gradient(transparent -moz-calc(100% - 1px),#ffc709 5px);
+    background-image: -o-linear-gradient(transparent calc(100% - 1px),#ffc709 5px);
+    background-image: linear-gradient(transparent calc(100% - 1px),#ffc709 5px);
+    background-position-y: -4px;
+    background-repeat: no-repeat;
+}
+
+.login:hover{
+    padding-bottom: 4px;
+}
+
+.secao {
+    background-image: url(https://web.xpi.com.br/wp-content/uploads/2022/07/home-desktop.jpg);
+    margin-top: 84px;
+}
+
 
 @media screen and (min-width: 1025px){
     .col-logo {
