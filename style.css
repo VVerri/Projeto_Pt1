@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    border: 0;
 
 }
 
@@ -9,12 +9,36 @@
     outline: none;
 }
 
+
 body {
-    width: 100%;
-    background: #fafafa;
-    position: relative;
-    font-family: 'Roboto', Helvetica, Arial, Sans-Serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
+
+body {
+    line-height: 1;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+header {
+    position: fixed;
+    z-index: 25;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    font-family: roboto,helvetica,arial,sans-serif;
+}
+
 
 .header-top {
     background: #222;
@@ -22,27 +46,49 @@ body {
     top: 0;
     left: 0;
     width: 100%;    
+    z-index: 25;
 }
 
 .container-header {
     display: block;
     width: auto;
     max-width: 1200px;
+    padding-right: 1rem;
+    padding-left: 1rem;
     margin-right: auto;
     margin-left: auto;
     float: none;
+    
 }
 
-.row-header {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -0.5rem;
-    margin-left: -0.5rem;
+.header-top .row-header {
     padding: 20px 0;
 }
 
-.col-logo {
+.row-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+}
+
+.header-top .col-logo {
     z-index: 1;
+}
+
+.col-logo {
+    align-self: center;
+    position: relative;
+    min-height: 1px;
+    box-sizing: border-box;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
 }
 
 .logo {
@@ -52,10 +98,20 @@ body {
     vertical-align: baseline;
 }
 
-.logo-img {
-    width: 40px;
-    height: 39px;
-       
+.header-logo, .header-hide-logo {
+    max-width: 100%;
+}
+
+.col-menu {
+    align-self: center;
+    position: relative;
+    min-height: 1px;
+    box-sizing: border-box;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
 }
 
 .ul-menu{
@@ -156,8 +212,12 @@ body {
 
 
 @media screen and (min-width: 1025px){
-    .col-logo {
+    .header-top .col-logo {
         max-width: 5%;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 5%;
+        -moz-box-flex: 0;
+        -ms-flex: 0 0 5%;
         flex: 0 0 5%;
     }
 }
@@ -170,10 +230,11 @@ body {
 }
 
 @media screen and (min-width: 1025px){
-    .logo-img {
+    .header-logo, .header-hide-logo {
         height: 39px;
     }
 }
+
 
 @media screen and (min-width: 1025px){
     .open-account {
@@ -183,5 +244,11 @@ body {
         padding: 0;
         line-height: 2.5rem;
         text-align: center;
+    }
+}
+
+@media screen and (min-width: 1025px){
+    .header-hide-logo {
+        display: none;
     }
 }
