@@ -21,9 +21,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 84px;
-    
+    width: 100%;    
 }
 
 .container-header {
@@ -47,6 +45,57 @@ body {
     z-index: 1;
 }
 
+.logo {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    vertical-align: baseline;
+}
+
+.logo-img {
+    width: 40px;
+    height: 39px;
+       
+}
+
+.ul-menu{
+    list-style: none;
+}
+
+.li-menu{
+    position: relative;
+    display: inline-block;
+    padding: 0 20px 0 0;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.word-menu {
+    width: auto;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    pointer-events: none;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: .875rem;
+    font-weight: inherit;
+}
+
+.col-singup {
+    z-index: 1;
+}
+
+.open-account {
+    padding: 10px 17px;
+    cursor: pointer;
+    font-size: .75rem;
+    letter-spacing: 1.71px;
+}
 
 @media screen and (min-width: 1025px){
     .col-logo {
@@ -59,5 +108,22 @@ body {
     .container-header {
         padding-right: 1rem;
         padding-left: 1rem;
+    }
+}
+
+@media screen and (min-width: 1025px){
+    .logo-img {
+        height: 39px;
+    }
+}
+
+@media screen and (min-width: 1025px){
+    .open-account {
+        display: block;
+        width: 100%;
+        height: 40px;
+        padding: 0;
+        line-height: 2.5rem;
+        text-align: center;
     }
 }
