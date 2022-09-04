@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+*:focus{
+    outline: none;
+}
+
+body {
+    width: 100%;
+    background: #fafafa;
+    position: relative;
+    font-family: 'Roboto', Helvetica, Arial, Sans-Serif;
+}
+
+.header-top {
+    background: #222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 84px;
+    
+}
+
