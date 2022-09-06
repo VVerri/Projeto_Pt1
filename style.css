@@ -259,6 +259,8 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     visibility: inherit;
 }
 
+
+
 .sec {
     background: #121212;
     visibility: inherit;
@@ -442,6 +444,147 @@ p {
     top: -71px;
 }
 
+.grid-dir {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -moz-box-orient: vertical;
+    -moz-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    position: relative;
+    -webkit-box-flex: 1;
+    min-width: 0px;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    justify-content: stretch;
+    min-height: 1px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.card-a{
+    width: 314px;
+    height: 103px;
+    text-decoration: none;
+}
+
+.card-a:last-child {
+    margin-bottom: 16px;
+}
+
+.soma-card{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: #1f1f1f;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: rgb(0 0 0 / 16%) 0px 4px 8px 0px;
+}
+
+.soma-card:hover{
+    background: #fff;
+
+}
+
+.card-img{
+    width: 75px;
+    height: 103px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.card-content{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 16px;
+}
+
+.content-card-h1{
+    margin-bottom: 8px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-card-h2{
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    line-height: 1.5;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.content-card-h2:hover{
+    color: #000;
+}
+
+.setinha-cima {
+    display: block;
+    line-height: 0;
+    position: absolute;
+    top: 52%;
+    transform: translateY(-50%);
+    right: calc(145px);
+    width: 24;
+    height: 24;
+    fill: none;
+}
+
+.setinha-baixo {
+    display: block;
+    line-height: 0;
+    position: absolute;
+    top: 95.5%;
+    transform: translateY(-50%);
+    right: calc(115px);
+    width: 24;
+    height: 24;
+    fill: none;
+}
+
+
+:host(.soma-card){
+    display: block;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: rgb(0 0 0 / 16%) 0px 4px 8px 0px;
+    background-color: rgb(255, 255, 255);
+}
+
 .sobre-xp {
     width: 100%;
 }
@@ -487,6 +630,7 @@ p {
     position: relative;
     left: 10px;
 }
+
 
 #divHelp .quest.info {
     right: 20px;
@@ -557,6 +701,10 @@ p {
 
 svg:not(:root) {
     overflow: hidden;
+}
+
+.grid-dir{
+    padding: calc(8px);
 }
 
 @media screen and (min-width: 1025px){
@@ -745,5 +893,73 @@ svg:not(:root) {
 @media screen and (min-width: 768px){
     .stl-h1 {
         font-size: 48px;
+    }
+}
+
+@media (min-width: 0px){
+    .grid-dir {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 600px){
+    .grid-dir {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 768px){
+    .grid-dir {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 1024px){
+    .grid-dir {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+}
+
+@media (min-width: 1366px){
+    .grid-dir {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .card-a {
+        width: 389px;
+        height: 125px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .card-a:last-child {
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .card-content {
+        margin: 24px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .card-img {
+        width: 120px;
+        height: 125px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .content-card-h1 {
+        font-size: 16px;
+        line-height: 24px;
     }
 }
