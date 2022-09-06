@@ -442,6 +442,122 @@ p {
     top: -71px;
 }
 
+.sobre-xp {
+    width: 100%;
+}
+
+.xp-container{
+    max-width: 1200px;
+}
+
+.sobre-xp-main {
+    margin: 24px;
+}
+
+:host(.soma-container){
+    max-width: 100%;
+    margin: 0px;
+}
+
+.header-xp{
+    margin-bottom: 40px;
+}
+
+.stl-h1{
+    margin-bottom: 24px;
+    color: #121212;
+    font-size: 32px;
+    display: block;
+    font-weight: 600;
+    line-height: 1.1;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    left: 10px;
+    letter-spacing: -1px;
+
+}
+
+.stl-h2 {
+    color: #1f1f1f;
+    line-height: 150%;
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    left: 10px;
+}
+
+#divHelp .quest.info {
+    right: 20px;
+}
+
+#divHelp .help {
+    position: fixed;
+    z-index: 1;
+}
+
+#divHelp .quest {
+    bottom: 20px;
+    -webkit-animation-duration: .5s;
+    -moz-animation-duration: .5s;
+    -o-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-name: _1ks3b;
+    -moz-animation-name: _1ks3b;
+    -o-animation-name: _1ks3b;
+    animation-name: _1ks3b;
+    line-height: 0;
+}
+
+#divHelp .quest .btnHelp {
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    -webkit-box-shadow: 0 4px 8px 0 rgb(0 0 0 / 15%);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0,0,0,.15);
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 15%);
+    line-height: 0;
+    -webkit-transition: -webkit-box-shadow .3s ease-in-out;
+    transition: -webkit-box-shadow .3s ease-in-out;
+    -o-transition: box-shadow .3s ease-in-out;
+    -moz-transition: box-shadow .3s ease-in-out,-moz-box-shadow .3s ease-in-out;
+    transition: box-shadow .3s ease-in-out;
+    transition: box-shadow .3s ease-in-out,-webkit-box-shadow .3s ease-in-out,-moz-box-shadow .3s ease-in-out;
+}
+
+#divHelp .btnHelp {
+    padding: 0;
+    border: 0;
+    font-size: 13px;
+    text-align: centre;
+}
+
+#divHelp .quest.info .spn-btn {
+    float: right;
+}
+
+#divHelp .spn-btn {
+    display: block;
+    padding: 15px;
+}
+
+#divHelp .spn-btn svg {
+    width: 30px!important;
+    height: 30px!important;
+    fill: #fff;
+}
+
+#divHelp .yell {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
 
 @media screen and (min-width: 1025px){
     .header-top .col-logo {
@@ -606,3 +722,28 @@ p {
     }
 }
 
+
+@media only screen and (min-width: 1366px){
+    .soma-container {
+        max-width: 1224px;
+        margin: 0px auto;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .sobre-xp-main {
+        margin: 120px 0;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .header-xp {
+        margin-bottom: 64px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .stl-h1 {
+        font-size: 48px;
+    }
+}
