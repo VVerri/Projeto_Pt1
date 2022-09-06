@@ -64,7 +64,7 @@ header {
 }
 
 .header-top .row-header {
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 .row-header {
@@ -131,6 +131,50 @@ header {
     color: #ffc709;
 }
 
+.li-menu::before {
+    position: absolute;
+    z-index: 1;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ffc709;
+    content: "";
+    -webkit-transition: width .3s cubic-bezier(.165,.84,.44,1);
+    -o-transition: width .3s cubic-bezier(.165,.84,.44,1);
+    -moz-transition: width .3s cubic-bezier(.165,.84,.44,1);
+    transition: width .3s cubic-bezier(.165,.84,.44,1);
+}
+
+.li-menu::after {
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    width: 5px;
+    height: 5px;
+    border: 2px solid #ffc709;
+    border-top: 0;
+    border-left: 0;
+    content: "";
+    font-size: 1.5rem;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 20% 50%;
+    -moz-transform-origin: 20% 50%;
+    -ms-transform-origin: 20% 50%;
+    -o-transform-origin: 20% 50%;
+    transform-origin: 20% 50%;
+    -webkit-transition: all .3s cubic-bezier(.165,.84,.44,1);
+    -o-transition: all .3s cubic-bezier(.165,.84,.44,1);
+    -moz-transition: all .3s cubic-bezier(.165,.84,.44,1);
+    transition: all .3s cubic-bezier(.165,.84,.44,1);
+}
+
+
+
 .word-menu {
     width: auto;
     padding: 0;
@@ -159,18 +203,24 @@ header {
     box-sizing: border-box;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
+    z-index: 1;
+    vertical-align: auto;
 }
 
-.open-account {
+.header-top .open-account {
     padding: 10px 17px;
     cursor: pointer;
     font-size: .75rem;
     letter-spacing: 1.71px;
-    background: #000000;
-    color: #ffffff;
-    border: 2px solid #ffffff;
+    border: 2px solid #fff;
+    background-color: #000;
+    border-radius: 2px;
+    color: #fff;
+    font-family: roboto,helvetica,arial,sans-serif;
+    font-weight: 600;
     text-decoration: none;
-    margin: 10px 5px ;
+    text-transform: uppercase;
+    transition: background-color .3s cubic-bezier(.165,.84,.44,1),border-color .3s cubic-bezier(.165,.84,.44,1);
 }
 
 .open-account:hover{
@@ -183,9 +233,14 @@ header {
     align-self: center;
     position: relative;
     min-height: 1px;
+    box-sizing: border-box;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
     
+}
+
+.header-top .login{
+    min-width: 6.8125rem;
 }
 
 .login {
@@ -272,7 +327,7 @@ p {
 
 
 @media screen and (min-width: 1025px){
-    .open-account {
+    .header-top .open-account {
         display: block;
         width: 100%;
         height: 40px;
@@ -282,17 +337,14 @@ p {
     }
 }
 
+
 @media screen and (min-width: 1025px){
     .header-hide-logo {
-        display: none;
+        display: none !important;
     }
 }
 
-@media screen and (min-width: 1025px){
-    .header-top .col-singup {
-    z-index: 1;
-    }
-}
+
 
 @media screen and (min-width: 1025px){
     .col-singup {
@@ -336,3 +388,26 @@ p {
     }
 }
 
+@media screen and (min-width: 1025px){
+    .header-top  .login {
+        font-size: .875rem;
+    }
+}
+
+@media screen and (min-width: 1025px){
+    .li-menu:hover:before {
+        width: -webkit-calc(100% - 11px);
+        width: -moz-calc(100% - 11px);
+        width: calc(100% - 11px);
+    }
+}
+
+@media screen and (min-width: 1025px){
+    .li-menu:hover:after {
+        -webkit-transform: rotate(45deg) translate(-1px,-3px);
+        -moz-transform: rotate(45deg) translate(-1px,-3px);
+        -ms-transform: rotate(45deg) translate(-1px,-3px);
+        -o-transform: rotate(45deg) translate(-1px,-3px);
+        transform: rotate(45deg) translate(-1px,-3px);
+    }
+}
