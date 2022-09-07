@@ -492,9 +492,12 @@ p {
     box-shadow: rgb(0 0 0 / 16%) 0px 4px 8px 0px;
 }
 
-.soma-card:hover{
+.soma-card:hover {
     background: #fff;
+}
 
+.soma-card:hover h2{
+    color: #000;
 }
 
 .card-img{
@@ -546,9 +549,7 @@ p {
     font-weight: bold;
 }
 
-.content-card-h2:hover{
-    color: #000;
-}
+
 
 .setinha-cima {
     display: block;
