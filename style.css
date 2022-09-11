@@ -8,6 +8,14 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
     padding: 0;
     border: 0;
@@ -378,8 +386,6 @@ body .sec {
 }
 
 .sec {
-    background: #121212;
-    visibility: inherit;
     position: relative;
     top: 0px;
     left: 0px;
@@ -389,26 +395,85 @@ body .sec {
     margin-right: auto;
     margin-left: auto;
     box-sizing: border-box;
-    height: 665px;
+
 }
 
-.princ {
-    background-image: url(https://web.xpi.com.br/wp-content/uploads/2022/07/home-desktop.jpg);
-    background-size: contain;
-    background-position-x: center;
-    background-color: #000 !important;
+body .sec{
+    background: #121212;
+}
+
+
+
+.princ{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+
+@media only screen and (min-width: 1366px){
+    .princ {
+        max-width: 1224px;
+        margin: 0px auto;
+    }
+}
+
+.sec.princ {
+    padding: 40px 20px;
     margin-top: 84px;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 665px;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
 }
 
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+.sec .princ {
+    max-width: 100%;
+    width: 100%;
+    margin: 0px;
+}
+
+.sec .princ {
+    background: #121212;
+}
+
+.sec .princ {
+    padding: 40px 20px;
+    margin-top: 84px;
+    background-repeat: no-repeat;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+}
+
+@media screen and (min-width: 992px){
+    .sec .princ {
+        padding-top: 85px;
+        padding-bottom: 96px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .sec .princ {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+body .sec .princ {
+    background-size: contain;
+    background-position-x: center;
+    background-color: #000 !important; 
+    
+}
+
+body .sec .princ{
+    background-image: url(https://web.xpi.com.br/wp-content/uploads/2022/07/home-desktop.jpg);
 }
 
 .conteu{
@@ -436,56 +501,77 @@ p {
     margin-left: 0px;
     -webkit-box-align: stretch;
     align-items: stretch; 
-    height: 400px;
+}
+
+.soma-grid-row .gridcol {
+    padding: calc(8px);
 }
 
 .gridcol {
-    padding: calc(8px);
     position: relative;
     display: flex;
+    flex-basis: 0px;
     -webkit-box-flex: 1;
+    flex-grow: 1;
     min-width: 0px;
+    max-width: 100%;
     -webkit-box-align: stretch;
     align-items: stretch;
     justify-content: stretch;
     min-height: 1px;
+    padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
 
-.leftcol {
-    height: 384px;
-    padding-bottom: 100px;
-}
 .left-header{
     margin-bottom: 40px;
-    
+}
+
+@media only screen and (max-width: 768px){
+    .title {
+        font-size: 64px;
+    }
+}
+
+.left-header .title {
+    color: rgb(251, 193, 5);
 }
 
 .title {
-    color: rgb(251, 193, 5);
     margin-bottom: 24px;
-    font-weight: 800;
+    font-weight: 400;
     font-family: helvetica;
     display: block;
+    font-size: 48px;
+    line-height: 52px;
 }
 
+.title strong{
+    font-weight: 400;
+}
 
 .CDB {
     line-height: 62px;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 48px;
 }
 
 .subtitle{
-    line-height: 24px;
-    visibility: inherit;
     display: block;
     font-weight: 600;
+    color: #fff;
+    font-size: 15px;
+    line-height: 30px;
+    line-height: 24px;
     font-family: Arial, Helvetica, sans-serif;
     
 }
 
+
 .cta-btn a {
+    display: block;
+    width: 100%;
     text-decoration: none;
 }
 
@@ -496,13 +582,29 @@ p {
     
 }
 
-.soma-btn {
+
+.cta-btn .soma-btn {
+    text-align: center;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
     display: inline-flex;
+    vertical-align: middle;
+    cursor: pointer;
     min-width: 108px;
-    max-width: 182.11px;
     height: 48px;
     font-size: 13px;
-    padding: 1px 6px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px 24px;
+}
+
+.cta-btn .soma-btn{
+    width: 100%;
+}
+
+.soma-btn{
     position: relative;
     text-align: center;
     border: none;
@@ -516,17 +618,28 @@ p {
     -webkit-box-align: center;
     align-items: center;
     cursor: pointer;
+    height: 64px;
     background-color: rgb(251, 193, 5);
+    border-radius: 0px;
+    padding: 0px 32px;
     letter-spacing: 1px;
     text-transform: none;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
+    font-weight: bold;
+    font-size: 12px;
     color: rgb(18, 18, 18);
     line-height: 1;
     transition-property: background-color;
     transition-delay: 0s;
     transition-duration: 100ms;
-    top: -70px;
+}
+
+
+
+@media screen and (min-width: 768px){
+    .cta-btn .soma-btn {
+        width: auto;
+    }
 }
 
 .disclaimer {
@@ -542,6 +655,8 @@ p {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-right: auto;
+    margin-left: auto;
     box-sizing: border-box;
 }
 
@@ -554,30 +669,22 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     line-height: 18px;
-    position: relative;
-    top: -71px;
+
 }
 
 .grid-dir {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -webkit-flex-direction: column-reverse;
-    -moz-box-orient: vertical;
-    -moz-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
     position: relative;
+    display: flex;
+    flex-basis: 0px;
     -webkit-box-flex: 1;
+    flex-grow: 1;
     min-width: 0px;
+    max-width: 100%;
     -webkit-box-align: stretch;
     align-items: stretch;
     justify-content: stretch;
     min-height: 1px;
+    padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
@@ -593,18 +700,26 @@ p {
 }
 
 .soma-card{
+    display: block;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: rgb(0 0 0 / 16%) 0px 4px 8px 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+.soma-card{
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     background: #1f1f1f;
-    border-radius: 8px;
-    width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
-    box-shadow: rgb(0 0 0 / 16%) 0px 4px 8px 0px;
+    
 }
+
+
 
 .soma-card:hover {
     background: #fff;
@@ -647,14 +762,17 @@ p {
 }
 
 .content-card-h1{
-    margin-bottom: 8px;
-    color: #fff;
-    font-size: 12px;
-    line-height: 21px;
-    font-weight: 600;
+    font-weight: bolder;
     display: block;
     letter-spacing: 0.0051px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-card-h1{
+    margin-bottom: 8px;
+    color: #fff;
+    font-size: 13.5px;
+    line-height: 21px;
 }
 
 .content-card-h2{
@@ -667,32 +785,20 @@ p {
     display: inline-block;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    width: fit-content;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    outline: none;
+    padding: 0px calc(32px) 0px 0px;
+    position: relative;
 }
 
-
-
-.setinha-cima {
+.setinha{
     display: block;
     line-height: 0;
     position: absolute;
-    top: 52%;
+    top: 50%;
     transform: translateY(-50%);
-    right: calc(145px);
-    width: 24;
-    height: 24;
-    fill: none;
-}
-
-.setinha-baixo {
-    display: block;
-    line-height: 0;
-    position: absolute;
-    top: 95.5%;
-    transform: translateY(-50%);
-    right: calc(115px);
-    width: 24;
-    height: 24;
-    fill: none;
+    right: calc(4px);
 }
 
 
@@ -706,11 +812,29 @@ p {
     background-color: rgb(255, 255, 255);
 }
 
-.sobre-xp {
+.sobre-xp{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+
+body .sobre-xp{
+    max-width: 100%;
+    width: 100%;
+    margin: 0px; 
+}
+
+body .sobre-xp {
     width: 100%;
 }
 
-.xp-container{
+.sobre-xp .xp-container{
     max-width: 1200px;
 }
 
@@ -735,8 +859,6 @@ p {
     font-weight: 600;
     line-height: 1.1;
     font-family: Arial, Helvetica, sans-serif;
-    position: relative;
-    left: 10px;
     letter-spacing: -1px;
 
 }
@@ -748,8 +870,6 @@ p {
     font-weight: 400;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
-    position: relative;
-    left: 10px;
 }
 
 
@@ -824,7 +944,22 @@ svg:not(:root) {
     overflow: hidden;
 }
 
-.grid-dir{
+body .soma-grid-row .grid-dir{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -moz-box-orient: vertical;
+    -moz-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+}
+
+.soma-grid-row .grid-dir{
     padding: calc(8px);
 }
 
@@ -957,19 +1092,7 @@ svg:not(:root) {
     }
 }
 
-@media screen and (min-width: 1200px){
-    .princ {
-        padding-right: 0;
-        padding-left: 0;
-    }
-}
 
-@media screen and (min-width: 992px){
-    .princ {
-        padding-top: 85px;
-        padding-bottom: 96px;
-    }
-}
 
 @media screen and (min-width: 1025px){
     .header-top  .login {
@@ -1001,7 +1124,28 @@ svg:not(:root) {
     }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 600px) {
+    .gridcol {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .gridcol {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .gridcol {
+        flex: 0 0 66.6667%;
+        max-width: 66.6667%;
+    }
+}
+
+@media (min-width: 1366px){
     .gridcol {
         flex: 0 0 66.6667%;
         max-width: 66.6667%;
@@ -1015,6 +1159,13 @@ svg:not(:root) {
     
 }
 
+@media screen and (min-width: 768px){
+    .leftcol a {
+        display: initial;
+        width: auto;
+    }
+}
+
 
 
 @media screen and (min-width: 1200px){
@@ -1026,8 +1177,6 @@ svg:not(:root) {
 @media screen and (min-width: 992px){
     .left-header {
         margin-bottom: 64px;
-        position: relative;
-        top: -45px;
     }
 }
 
@@ -1040,10 +1189,7 @@ svg:not(:root) {
 
 @media screen and (min-width: 768px){
     .subtitle {
-        font-size: 19.5px;
-        position: relative;
-        top: -22px;
-        letter-spacing: normal;
+        font-size: 19px;
     }
 }
 
@@ -1057,6 +1203,13 @@ svg:not(:root) {
 
 @media only screen and (min-width: 1366px){
     .soma-container {
+        max-width: 1224px;
+        margin: 0px auto;
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .sobre-xp{
         max-width: 1224px;
         margin: 0px auto;
     }
@@ -1101,7 +1254,7 @@ svg:not(:root) {
     }
 }
 
-@media (min-width: 1025px){
+@media (min-width: 1024px){
     .grid-dir {
         flex: 0 0 33.3333%;
         max-width: 33.3333%;
@@ -1143,7 +1296,7 @@ svg:not(:root) {
 
 @media screen and (min-width: 768px){
     .content-card-h1 {
-        font-size: 16px;
+        font-size: 15.3px;
         line-height: 24px;
     }
 }
@@ -1151,7 +1304,7 @@ svg:not(:root) {
 
 @media only screen and (max-width: 768px){
     .CDB {
-        font-size: 48px;
+        font-size: 47px;
     }
 }
 
@@ -1360,11 +1513,33 @@ svg:not(:root) {
 }
 
 @media screen and (max-width: 768px){
-    .princ {
+    body .sec .princ {
         background-image: url(https://web.xpi.com.br/wp-content/uploads/2022/07/home-mobile-3.png);
     }
 }
 
-@media screen and (max-width: 767) {
-    
+
+@media only screen and (min-width: 0px) and (max-width: 599px){
+    .conteu {
+        margin: 0px auto;
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .sec {
+        max-width: 1224px;
+        margin: 0px auto;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 599px){
+    .princ {
+        margin: 0px auto;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .card-a:not(:last-child) {
+        margin-bottom: 32px;
+    }
 }
