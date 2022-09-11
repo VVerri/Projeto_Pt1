@@ -1297,8 +1297,10 @@ body .soma-grid-row .grid-dir{
 
 @media screen and (min-width: 768px){
     .content-card-h1 {
-        font-size: 14.5px;
         line-height: 24px;
+        font-size: 14.8px;
+        letter-spacing: normal;
+        
     }
 }
 
