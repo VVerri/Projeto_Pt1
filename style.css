@@ -561,7 +561,8 @@ body .sec .princ{
     display: block;
     font-weight: 600;
     color: #fff;
-    font-size: 15px;
+    font-size: 15.8px;
+    letter-spacing: 0.001px;
     line-height: 30px;
     line-height: 24px;
     font-family: Arial, Helvetica, sans-serif;
