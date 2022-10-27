@@ -998,7 +998,25 @@ body .soma-grid-row .grid-dir{
     width: 0.75em;
 }
 
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+}
 
+.dialog {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    background-color: white;
+
+}
 
 
 @media screen and (min-width: 1025px){
